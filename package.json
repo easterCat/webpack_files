@@ -1,0 +1,45 @@
+{
+  "name": "ebim-official",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --devtool eval --progress --colors --hot --inline --history-api-fallback --content-base dist",
+    "build": "NODE_ENV=production webpack --config webpack.config.js",
+    "build_win": "set NODE_ENV=production&&webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:ebim/app/official.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.28.1",
+    "extract-loader": "^0.1.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "html-loader": "^0.4.5",
+    "image-webpack-loader": "^3.3.0",
+    "node-sass": "^4.5.2",
+    "postcss-loader": "^1.3.3",
+    "postcss-smart-import": "^0.6.12",
+    "precss": "^1.4.0",
+    "sass-loader": "^6.0.3",
+    "strip-loader": "^0.1.2",
+    "style-loader": "^0.17.0",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

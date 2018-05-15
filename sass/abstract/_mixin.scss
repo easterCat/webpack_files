@@ -1,0 +1,72 @@
+@mixin all-pseudo {
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.active:hover {
+        @content;
+    }
+}
+
+@function parseInt($n) { /* 2 */
+    @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+    $px : (); /* 3 */
+    $rem: (); /* 3 */
+
+    @each $value in $values { /* 4 */
+
+        @if $value == 0 or $value == auto { /* 5 */
+            $px : append($px , $value);
+            $rem: append($rem, $value);
+        }
+
+        @else {
+            $unit: unit($value);    /* 6 */
+            $val: parseInt($value); /* 6 */
+
+            @if $unit == "px" {  /* 7 */
+                $px : append($px,  $value);
+                $rem: append($rem, ($val / 10 + rem));
+            }
+
+            @if $unit == "rem" { /* 7 */
+                $px : append($px,  ($val * 10 + px));
+                $rem: append($rem, $value);
+            }
+        }
+    }
+
+    @if $px == $rem {     /* 8 */
+        #{$property}: $px;  /* 9 */
+    } @else {
+        #{$property}: $px;  /* 9 */
+        #{$property}: $rem; /* 9 */
+    }
+}
+
+@mixin font-size($size: 14px) {
+    @include rem(font-size, $size);
+}
+
+@mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+@mixin clearAfter() {
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}

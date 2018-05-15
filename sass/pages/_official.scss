@@ -1,0 +1,224 @@
+.top-panel {
+    width: 100%;
+    padding-top: $nav-height;
+    z-index: 100;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+
+    .title-large {
+        margin-top: 80px;
+        margin-bottom: 30px;
+        text-align: center;
+        @include font-size(28px);
+        color: $blue;
+        @media screen and (min-width: 768px) {
+            @include font-size(35px);
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 4;
+    }
+
+    img.main-image {
+        width: 100%;
+        margin: 50px auto 0;
+
+        @media screen and (min-width: 768px) {
+            margin: 100px auto 0;
+            width: 70%;
+        }
+
+        @media screen and (min-width: 1024px) {
+            margin: 100px auto 0;
+            width: 70%;
+        }
+
+        @media screen and (min-width: 1669px) {
+            margin: 200px auto 0;
+            width: 65%;
+        }
+    }
+
+    img.bg-image {
+        position: absolute;
+        right: 0;
+        bottom: -20px;
+        width: 100%;
+        min-width: 300px;
+
+        @media screen and (min-width: 768px) {
+            width: 60%;
+        }
+
+        @media screen and (min-width: 1024px) {
+            bottom: -40px;
+            width: 60%;
+        }
+
+        @media screen and (min-width: 1669px) {
+            bottom: -70px;
+            width: 50%;
+        }
+    }
+}
+
+img.mobile-img {
+    width: 95%;
+}
+
+img.web-img {
+    width: 95%;
+}
+
+img.pc-img {
+    width: 85%;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.intro-title {
+    max-width: 420px;
+    text-align: center;
+
+    &.main-title {
+        margin: 0 auto 15px;
+    }
+
+    @media screen and (min-width: 768px) {
+        &.main-title {
+            margin: 0 auto 25px;
+        }
+    }
+}
+
+.intro-contents {
+    max-width: 430px;
+    margin: 0 auto;
+    color: $text-dark-gray;
+    line-height: 2;
+    @include font-size(16px);
+}
+
+.intro-container {
+    padding: 0 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.pc-container {
+    position: relative;
+    border-bottom: 1px solid #eee;
+
+    .intro-container {
+        padding-top: 40px;
+    }
+
+    @media screen and (min-width: 768px) {
+        .intro-container {
+            padding-top: 0;
+        }
+    }
+}
+
+.web-and-mobile-container {
+    padding: 45px 0;
+    background: #f2f2f2; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, #f2f2f2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, #f2f2f2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, #f2f2f2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, #f2f2f2); /* Standard syntax */
+}
+
+.main-title {
+    @include font-size(22px);
+    font-weight: bold;
+    color: $blue;
+    text-align: center;
+    margin-bottom: 35px;
+    @media screen and (min-width: 768px) {
+        @include font-size(28px);
+    }
+}
+
+.features {
+    padding: 70px 0 50px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eee;
+
+    &-title {
+        color: black;
+    }
+}
+
+.feature {
+    text-align: center;
+    margin: 15px 0 20px;
+
+    &-icon {
+        width: 55px;
+        margin: 0 auto 15px;
+        img {
+            width: 100%;
+        }
+    }
+
+    &-title {
+        @include font-size(18px);
+        font-weight: 600;
+        margin: 10px 0;
+    }
+
+    &-contents {
+        margin-right: 10%;
+        margin-left: 10%;
+        color: $text-dark-gray;
+        line-height: 1.6;
+        @include font-size(16px);
+    }
+}
+
+.clients {
+    padding: 70px 0 60px;
+}
+
+.client {
+    text-align: center;
+    margin: 30px 0;
+
+    &-logo {
+        &.sanxiang-logo {
+            height: 64px;
+        }
+    }
+
+    &-name {
+        @include font-size(16px);
+        font-weight: 600;
+        margin: 10px;
+    }
+
+    &-img {
+        width: 90px;
+        &.sanxiang-img {
+            width: 150px;
+            @include vertical-align;
+        }
+    }
+}
+
+
+

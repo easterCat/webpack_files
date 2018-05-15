@@ -1,0 +1,157 @@
+.products-page {
+    padding-top: $nav-height;
+
+    .title-container {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 35px 0;
+    }
+
+    .product-container {
+        width: 640px;
+        height: 120px;
+        margin: 25px auto;
+        background-color: #f8f8f8;
+        @include clearAfter;
+    }
+
+    .notes-container {
+        width: 640px;
+        margin: 35px auto;
+        background-color: #f8f8f8;
+        padding: 20px 30px;
+    }
+
+    .brand-container {
+        float: left;
+        border-right: 1px solid #ddd;
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        text-align: center;
+    }
+
+    .brand-windows {
+        width: 50px;
+    }
+
+    .brand-apple {
+        width: 45px;
+    }
+
+    .brand-android {
+        width: 45px;
+    }
+
+    .links-container {
+        float: left;
+        width: 520px;
+        text-align: center;
+        height: 100%;
+        line-height: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        @include clearAfter;
+    }
+
+    .version {
+        margin-left: 15px;
+        font-size: 16px;
+        color: $text-dark-gray;
+    }
+
+    .logo-container,
+    .link-container {
+        float: left;
+        height: 120px;
+        line-height: 120px;
+    }
+
+    .logo-container {
+        width: 20%;
+    }
+
+    .link-container {
+        width: 30%;
+    }
+
+    .icon-img {
+        width: 43px;
+
+        &-pc {
+            width: 46px;
+        }
+
+        &-android,
+        &-iphone {
+            width: 24px;
+        }
+
+        &-revit {
+            width: 35px;
+        }
+
+        &-ipad {
+            width: 46px;
+        }
+    }
+
+    .qr-img {
+        width: 110px;
+        height: 110px;
+    }
+
+    button a {
+        color: white !important;
+
+        &.unactive {
+            pointer-events: none;
+        }
+    }
+
+    .note {
+        white-space: pre-wrap;
+        line-height: 13px;
+        &.no-note {
+            text-align: center;
+            color: $text-dark-gray;
+        }
+    }
+
+    .fa-qrcode {
+        font-size: 35px;
+        color: rgba(0,0,0,0.3);
+    }
+
+    .link-button {
+        display: block;
+        border: 1px solid $blue;
+        border-radius: 3px;
+        color: $blue;
+        width: 90px;
+        height: 32px;
+        line-height: 31px;
+        margin: 0 auto;
+        @include vertical-align;
+        cursor: pointer;
+
+        @include all-pseudo {
+            color: white;
+            background-color: lighten($blue, 5%);
+            transition-property: background-color, color;
+            transition-duration: 0.1s;
+            transition-timing-function: ease-out;
+        }
+    }
+
+    .requirement-note {
+        white-space: pre-wrap;
+        line-height: 26px;
+    }
+    
+    img {
+        vertical-align: middle;
+    }
+
+}

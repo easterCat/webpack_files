@@ -1,0 +1,59 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%; /* Sets up the Base 10 stuff */
+    font-family: 'Arial', 'Microsoft YaHei';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    @include font-size(14px);
+    font-family: 'Arial', 'Microsoft YaHei';
+}
+
+a,div,span {
+    box-sizing: border-box;
+}
+
+a {
+    color: $text-gray;
+    text-decoration: none;
+    @include all-pseudo {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: 768px) {
+        width: 750px;
+    }
+
+    @media (min-width: 992px) {
+        width: 970px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 1170px;
+    }
+
+    @media (min-width: 1679px) {
+        width: 1400px;
+    }
+
+    @media (min-width: 1900px) {
+        width: 1600px;
+    }
+}
+
+.clear,
+.clearfix {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
